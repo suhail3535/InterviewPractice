@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Counter App</title>
+    </head>
+    <body>
+        <div id="counter">0</div>
+        <button id="increment">Increment</button>
+        <button id="decrement">Decrement</button>
+        <button id="reset">reset</button>
+    </body>
+</html>
+
+<script>
+    let numContainer = document.getElementById("counter");
+    let value = 0;
+
+    let btnInc = document.querySelector("#increment");
+    let btnDec = document.querySelector("#decrement");
+    let btnReset = document.querySelector("#reset");
+
+
+
+    btnInc.addEventListener("click",() => {
+            value++;
+            numContainer.innerText = value;
+            if (value === 10) {
+                btnInc.disabled = true;
+            }
+        })
+    btnDec.addEventListener("click", () => {
+        value--;
+        numContainer.innerText = value;
+            if (value ===0) {
+                btnDec.disabled = true;
+            }
+    });
+
+    btnReset.addEventListener("click", () => {
+        value = 0;
+        numContainer.innerText = value;
+    });
+</script>
