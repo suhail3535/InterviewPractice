@@ -1,9 +1,10 @@
-import Ref from "./Component/Ref";
+
+import Ref2 from "./Component/Ref2";
 
 function App() {
   return (
       <div className="App">
-<Ref />
+<Ref2 />
       </div>
   );
 }
