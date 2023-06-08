@@ -19,21 +19,19 @@
     let btnDec = document.getElementById("decrement");
     let btnReset = document.getElementById("reset");
 
-
-
-    btnInc.addEventListener("click",() => {
-            value++;
-            numContainer.innerText = value;
-            if (value === 10) {
-                btnInc.disabled = true;
-            }
-        })
+    btnInc.addEventListener("click", () => {
+        value++;
+        numContainer.innerText = value;
+        if (value === 10) {
+            btnInc.disabled = true;
+        }
+    });
     btnDec.addEventListener("click", () => {
         value--;
         numContainer.innerText = value;
-            if (value ===0) {
-                btnDec.disabled = true;
-            }
+        if (value === 0) {
+            btnDec.disabled = true;
+        }
     });
 
     btnReset.addEventListener("click", () => {
