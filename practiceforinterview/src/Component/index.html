@@ -8,6 +8,10 @@
         <button id="increment">Increment</button>
         <button id="decrement">Decrement</button>
         <button id="reset">reset</button>
+        <button id="deb" onClick="{newFun()}">clickme</button>
+        <input type="text" oninput={mainData()} placeholder="Search..." />
+
+        <!-- <input type="text" id="searchInput" placeholder="Search..." /> -->
     </body>
 </html>
 
@@ -38,4 +42,38 @@
         value = 0;
         numContainer.innerText = value;
     });
+
+    // *********throttle***********
+
+    const newFun = mythrottel(() => {
+        document.getElementById("deb").disabled = false;
+        console.log("user clicck me");
+    }, 2000);
+
+    function mythrottel(call, delay) {
+        return function (...arg) {
+            document.getElementById("deb").disabled = true;
+            setTimeout(() => {
+                call();
+            }, delay);
+        };
+    }
+
+    // *********Debouncing***********
+    let counter = 0;
+    function getResult() {
+        console.log("data getting " + counter++);
+    }
+
+    function myDebouncer (call, d) {
+        let timer;
+        return function (...args) {
+            if (timer) clearTimeout(timer);
+            timer = setTimeout(() => {
+                call();
+            }, d);
+        };
+    }
+
+    const mainData = myDebouncer(getResult, 1000);
 </script>
