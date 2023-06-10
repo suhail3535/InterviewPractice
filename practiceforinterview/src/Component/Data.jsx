@@ -45,7 +45,8 @@ const [price, setPrice] = useState("");
         e.preventDefault()
 
 
-          postData2(newData);
+        postData2(newData);
+        
 
     }
 

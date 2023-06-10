@@ -1,6 +1,5 @@
 {
   "product": [
-  
     {
       "name": "hello",
       "price": "1000",
@@ -15,6 +14,16 @@
       "name": "hello3",
       "price": "1500",
       "id": 6
+    },
+    {
+      "name": "hello4",
+      "price": "11000",
+      "id": 7
+    },
+    {
+      "name": "data",
+      "price": "100",
+      "id": 8
     }
   ]
 }
