@@ -6,7 +6,7 @@ const countries = [
     { name: "Bangladesh", value: "BG", cities: ["Dhaka", "Chittagong"] }
 ];
 
-const Country= ()=> {
+const Country = () => {
     // state to store the value of the country
     const [country, setCountry] = useState([]);
 
@@ -34,7 +34,7 @@ const Country= ()=> {
             {/* 2nd DropDown */}
 
             <select>
-                {countries[country]&&
+                {countries[country] &&
                     countries[country].cities.map((item, index) => {
                         return <option value={index}>{item}</option>;
                     })}

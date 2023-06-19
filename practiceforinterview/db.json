@@ -1,29 +1,22 @@
 {
   "product": [
     {
-      "name": "hello",
-      "price": "1000",
+      "name": "suhail",
+      "age": "25",
+      "course": "React",
+      "id": 2
+    },
+    {
+      "name": "RAJ",
+      "age": "25",
+      "course": "MERN",
       "id": 4
     },
     {
-      "name": "hello2",
-      "price": "1200",
+      "name": "AMAN",
+      "age": "25",
+      "course": "JAVA",
       "id": 5
-    },
-    {
-      "name": "hello3",
-      "price": "1500",
-      "id": 6
-    },
-    {
-      "name": "hello4",
-      "price": "11000",
-      "id": 7
-    },
-    {
-      "name": "data",
-      "price": "100",
-      "id": 8
     }
   ]
 }
