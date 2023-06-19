@@ -57,7 +57,7 @@ const PostData = () => {
             console.log(error);
         }
     };
-
+//for UpdateData
     const handleUpdate = (id) => {
         const selectedItem = user.find((item) => item.id === id);
         setName(selectedItem.name);
@@ -65,7 +65,7 @@ const PostData = () => {
         setCourse(selectedItem.course);
         setUpdateId(id);
     };
-///most important 
+///most important
     const handleSubmit = (e) => {
         e.preventDefault();
         if (updateId) {
