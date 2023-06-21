@@ -103,19 +103,116 @@
 
 
 // revres an array
-let arr = [1, 2, 3, 4, 5];
-let start = 0;
-let end = arr.length - 1;
+// let arr = [1, 2, 3, 4, 5];
+// let start = 0;
+// let end = arr.length - 1;
 
-while (start < end) {
-    // Swap elements at start and end indices
-    let temp = arr[start];
-    arr[start] = arr[end];
-    arr[end] = temp;
+// while (start < end) {
+//     // Swap elements at start and end indices
+//     let temp = arr[start];
+//     arr[start] = arr[end];
+//     arr[end] = temp;
 
-    // Move the pointers inward
-    start++;
-    end--;
-}
+//     // Move the pointers inward
+//     start++;
+//     end--;
+// }
 
-console.log(arr);
+// console.log(arr);
+
+
+
+// let arr = [1, 2, 3, 5, 6, 7, 8, 9, 10]
+// output=[10,9,8,7,6,5,3,2,1]
+
+// let start = 0;
+// let end = arr.length - 1;
+// while (start < end) {
+//     let temp = arr[start]
+//     arr[start] = arr[end]
+//     arr[end] = temp;
+//     start++;
+//     end--;
+
+// }
+// console.log(arr.join(" "))
+// let arr1 = [1, 3, 5]
+// let arr2 = [2, 4, 6]
+// output=[1,2,3,4,5,6]
+// let arr=[...arr1,...arr2]
+// function sortedArray (arr) {
+//     for (let i = 0; i < arr.length; i++){
+//         for (let j = 0; j < arr.length - 1 - i; j++){
+//             if (arr[j] > arr[j + 1]) {
+//                 let temp = arr[j]
+//                 arr[j] = arr[j + 1]
+//                 arr[j + 1] = temp;
+// }
+//         }
+//     }
+//     return arr.join(" ");
+
+// }
+// console.log(sortedArray(arr))
+
+
+// const array = [2, 3, 4, 5];
+// const addValue = 1;
+
+// // Shift elements to the right
+// for (let i = array.length; i > 0; i--) {
+//     array[i] = array[i - 1];
+// }
+
+// array[0] = addValue;
+
+// console.log(array);
+
+// const array = [2, 3, 4, 5];
+// const newValue = 10;
+
+// // Assign the new value at the last position
+// array[array.length] = newValue;
+
+// console.log(array);
+
+
+// let arr = [2, 3, 4, 5];
+// arr.unshift(2);
+
+// console.log(arr);
+// let array = [2, 3, 4, 5];
+// array.push(1);
+
+// console.log(array);
+
+// const array = ["key1", "value1", "key2", "value2", "key3", "value3"];
+
+// const obj = array.reduce((acc, currentValue, index, array) => {
+//     if (index % 2 === 0) {
+//         // Even index: treat it as a key
+//         acc[currentValue] = array[index + 1];
+//     }
+//     return acc;
+// }, {});
+
+// console.log(obj);
+
+
+const arr = [1, 2, 3, 4];
+
+const obj = arr.reduce((acc, currentValue, index) => {
+    acc[index] = currentValue;
+    return acc;
+},{});
+
+console.log(obj);
+
+// const arr = [1, 2, 3, 4];
+// const obj = {};
+
+// for (let i = 0; i < arr.length; i++) {
+//     obj[i] = arr[i];
+// }
+
+// console.log(obj);
