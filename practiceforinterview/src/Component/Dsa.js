@@ -72,7 +72,7 @@
 // ****************************************************
 
 //Question-04 Find second largest number inside the array******
-// const array = [5, 2, 8, 9, 1, 7];
+// const array = [5, 2, 8,9, 1, 7];
 // function findSecondmaxNumber(arr) {
 //   let max = -Infinity;
 //   let secondmax = -Infinity;
@@ -87,7 +87,7 @@
 //   return secondmax;
 
 // }
-// const result = findSecondmaxNumber(array);
+//  console.log(findSecondmaxNumber(array));
 // console.log("Second max number:", result);
 
 
@@ -176,8 +176,8 @@
 
 
 // merge two array and return value as sortd
-// let arr1 = [1, 3, 31, 25];
-// let arr2 = [7, 10, 12, 15];
+// let arr1 = [1, 2, 3, 5];
+// let arr2 = [4, 6, 7, 8];
 // let arr = [...arr1, ...arr2];
 // function sortedArray(arr){
 //     for (let i = 0; i < arr.length; i++) {
@@ -190,11 +190,29 @@
 //             }
 //         }
 //     }
-//     return arr;
+//     return arr.join(" ");
 // }
 
-// console.log(sortedArray(arr.join(" ")));
+// console.log(sortedArray(arr));
+// let arr1 = [2, 1, 3, 4]
+// let arr2 = [5, 6, 10, 9]
 
+
+// let arr = [...arr1, ...arr2]
+// function find (arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = 0; j < arr.length; j++) {
+//             if (arr[j] > arr[j + 1]) {
+//                 let temp = arr[j]
+//                 arr[j] = arr[j + 1]
+//                 arr[j + 1] = temp
+//             }
+//         }
+//     }
+//     console.log(arr.join(" "))
+// }
+
+// find(arr)
 
 // revres an array
 // let arr = [1, 2, 3, 4, 5];
@@ -211,6 +229,8 @@
 
 // console.log(arr);
 
+// let arr = [1, 2, 3, 4, 5]
+// console.log(arr.slice(2,4))
 
 
 
@@ -230,7 +250,7 @@
 //         }
 //     }
 //     return{max,min}
-// } 
+// }
 // let result = maxMin(arr)
 // console.log("Maximun number is",result.max ,"and Minimun number is",result.min)
 // // console.log(maxMin(arr))
@@ -240,16 +260,16 @@
 // Problem: Check if the elements in an array are sorted in non - decreasing order.
 
 
-let arr = [1, 2, 3, 4, 5]
-function isArraySorted (arr) {
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] < arr[i-1]) {
-            return false;
-        }
-    }
-    return true;
-}
-console.log(isArraySorted(arr))
+// let arr = [1, 2, 3, 4, 5]
+// function isArraySorted (arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] < arr[i-1]) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+// console.log(isArraySorted(arr))
 
 // let arr = [1, 2, 3, 4, 4, 5]
 // let obj = {};
@@ -301,4 +321,34 @@ console.log(isArraySorted(arr))
 // }
 
 // Unique(arr)
+// some of positive integer
+// const arr = [ -2, -9, -4, 0, 9, 1, 7];
+
+// function findSum (arr) {
+//     let sum = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] > 0) {
+//             sum = sum + arr[i]
+//         }
+//     }
+//     return sum
+// }
+// console.log(findSum(arr))
+
+
+function findIntersection (arr1, arr2) {
+    const result = [];
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr2.includes(arr1[i]) && !result.includes(arr1[i])) {
+            result.push(arr1[i]);
+        }
+    }
+    return result;
+}
+
+
+let arr1 = [1, 2, 3, 4, 5];
+let arr2 = [4, 5, 6, 7, 8];
+let result = findIntersection(arr1, arr2);
+console.log(result);
 
