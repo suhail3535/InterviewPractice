@@ -230,7 +230,7 @@
 //         }
 //     }
 //     return{max,min}
-// }
+// } 
 // let result = maxMin(arr)
 // console.log("Maximun number is",result.max ,"and Minimun number is",result.min)
 // // console.log(maxMin(arr))
@@ -251,6 +251,54 @@ function isArraySorted (arr) {
 }
 console.log(isArraySorted(arr))
 
+// let arr = [1, 2, 3, 4, 4, 5]
+// let obj = {};
+// for (let i = 0; i < arr.length; i++){
+//     if (obj[arr[i]] === undefined) {
+//         obj[arr[i]] = 1;
+//     } else {
+//         obj[arr[i]]++
+//     }
 
+// }
 
+// let ans;
+// for (let key in obj) {
+//     if (obj[key] > 1) {
+//         delete(obj[key])
+//     }
+// }
+// console.log(arr)
+
+// let arr = [1, 2, 3, 4, 4, 5];
+// let resultArray = [];
+
+// function find (arr) {
+//     let bag = "";
+//     for (let i = 0; i <= arr.length - 1; i++) {
+//         if (arr[i] !== arr[i + 1]) {
+//             bag += arr[i] + " ";
+//         }
+//     }
+//     resultArray.push(bag);
+//     console.log(resultArray);
+//     console.log(bag);
+// }
+// remove duplicate from an Array
+// find(arr);
+// let arr = [1, 2, 3, 4, 4, 5, 5];
+// let obj = {};
+// let resultArray = [];
+// function Unique (arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         obj[arr[i]] = 1;
+//     }
+
+//     for (let key in obj) {
+//         resultArray.push(Number(key));
+//     }
+//     console.log(resultArray)
+// }
+
+// Unique(arr)
 
