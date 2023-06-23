@@ -347,8 +347,8 @@ function findIntersection (arr1, arr2) {
 }
 
 
-let arr1 = [1, 2, 3, 4, 5];
-let arr2 = [4, 5, 6, 7, 8];
+let arr1 = [1, 2, 3, 4, 5,7];
+let arr2 = [4, 5, 6, 7, 8,7];
 let result = findIntersection(arr1, arr2);
 console.log(result);
 
