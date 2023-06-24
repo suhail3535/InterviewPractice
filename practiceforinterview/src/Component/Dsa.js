@@ -336,19 +336,245 @@
 // console.log(findSum(arr))
 
 
-function findIntersection (arr1, arr2) {
-    const result = [];
-    for (let i = 0; i < arr1.length; i++) {
-        if (arr2.includes(arr1[i]) && !result.includes(arr1[i])) {
-            result.push(arr1[i]);
+// function findIntersection (arr1, arr2) {
+//     const result = [];
+//     for (let i = 0; i < arr1.length; i++) {
+//         if (arr2.includes(arr1[i]) && !result.includes(arr1[i])) {
+//             result.push(arr1[i]);
+//         }
+//     }
+//     return result;
+// }
+
+
+// let arr1 = [1, 2, 3, 4, 5,7];
+// let arr2 = [4, 5, 6, 7, 8,7];
+// let result = findIntersection(arr1, arr2);
+// console.log(result);
+// let arr = [1, 2, 3, 4, 5,5, 7,7];
+// function findMajorityElement (arr) {
+//     let majorityElement = arr[0];
+//     let count = 1;
+//     for (let i = 1; i < arr.length; i++) {
+//         if (arr[i] === majorityElement) {
+//             count++;
+//         } else {
+//             count--;
+//             if (count === 0) {
+//                 majorityElement = arr[i];
+//                 count = 1;
+//             }
+//         }
+//     }
+//     return majorityElement;
+// }
+// console.log(findMajorityElement(arr))
+
+
+// find majority element in an array
+// function findMajorityElement (arr) {
+//     const countObj = {};
+//     let majorityElement = arr[0];
+//     let count = 1;
+
+//     for (let i = 0; i < arr.length; i++) {
+//         if (countObj[arr[i]] === undefined) {
+//             countObj[arr[i]] = 1;
+//         } else {
+//             countObj[arr[i]]++;
+//         }
+
+
+//     }
+//     let bag;
+//     for (let key in countObj) {
+//         if (countObj[key] > 1) {
+//             bag = key
+//             break;
+//       }
+//     }
+
+//     return bag;
+// }
+
+// console.log(findMajorityElement(arr)); // Expected output: 5
+// function maximumOccuringElement (A) {
+//     let obj = {};
+//     for (let i = 0; i < A.length; i++) {
+//         if (obj[A[i]] === undefined) {
+//             obj[A[i]] = 1;
+//         } else {
+//             obj[A[i]]++
+//         }
+//     }
+
+//     let max = -Infinity
+//     let b;
+//     for (let key in obj) {
+//         if (obj[key] > max) {
+//             max = obj[key];
+//             b = key
+//         }
+
+//     }
+//     return b;
+// }
+// console.log(maximumOccuringElement(A))
+
+// *************Maximum Sum of SUB array************
+// let arr = [1, 2, 3, 4];
+// function findMaxSumSubarray (arr) {
+//     let maxSum = -Infinity;
+//     let currentSum = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         currentSum = Math.max(currentSum + arr[i], arr[i]);
+//         maxSum = Math.max(maxSum, currentSum);
+//     }
+//     return maxSum;
+// }
+// console.log(findMaxSumSubarray(arr))
+
+
+// function find (arr) {
+//     let max = -Infinity;
+//     let maxind =0;
+//     for (let i = 0; i < arr.length; i++){
+//         maxind = Math.max(maxind + arr[i],arr[i])
+//         max=Math.max(max,maxind)
+//     }
+//     return max;
+// }
+// console.log(find(arr))
+
+// ***************SubArray***************
+// function findSubarrays (arr) {
+//     const subarrays = [];
+
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = i; j < arr.length; j++) {
+//             const subarray = arr.slice(i, j + 1);
+//             subarrays.push(subarray);
+//         }
+//     }
+
+//     return subarrays;
+// }
+
+
+// let result = findSubarrays(arr);
+// console.log(result);
+// function findSubarrays (arr) {
+//     const subarrays = [];
+
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = i; j < arr.length; j++) {
+//             const subarray = [];
+//             for (let k = i; k <= j; k++) {
+//                 subarray.push(arr[k]);
+//             }
+//             subarrays.push(subarray);
+//         }
+//     }
+
+//     return subarrays;
+// }
+
+
+// let result = findSubarrays(arr);
+// console.log(result);
+
+//  let arr = [1, 2, 3, 4,4];
+
+// function subarray (arr) {
+//     for (let i = 0; i < arr.length; i++){
+//         let subarr = []
+//         for (let j = i; j < arr.length; j++){
+//             subarr.push(arr[j])
+//             console.log(subarr)
+//         }
+
+//     }
+
+// }
+
+// console.log(subarray(arr))
+
+
+
+
+let arr = [1, 2, 3, 5, 5];
+
+function findMissingRepeated (arr) {
+    let obj = {};
+    for (let i = 1; i <=arr.length; i++) {
+        obj[i] = 0;
+    }
+    // console.log(obj)
+    for (let i = 0; i < arr.length; i++) {
+        obj[arr[i]]++;
+    }
+
+    let missing;
+    let repeated;
+
+    for (let key in obj) {
+        if (obj[key] === 0) {
+            missing = key;
+        }
+        if (obj[key] === 2) {
+            repeated = key;
         }
     }
-    return result;
+
+    return { missing, repeated };
 }
 
+let result = findMissingRepeated(arr);
+console.log(result.missing, result.repeated);
 
-let arr1 = [1, 2, 3, 4, 5,7];
-let arr2 = [4, 5, 6, 7, 8,7];
-let result = findIntersection(arr1, arr2);
-console.log(result);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function missing (arr) {
+//     let obj = {};
+//     for (let i = 1; i <= arr.length + 1; i++) {
+//         obj[i] = 0;
+
+//     }
+//     console.log(obj)
+//     for (let i = 0; i <= arr.length - 1; i++) {
+//         delete (obj[arr[i]])
+//     }
+
+//     let ans;
+//     for (let key in obj) {
+//         if (obj[key] < 1) {
+//             ans = key
+
+//         }
+//     }
+//     console.log(ans)
+// }
+// missing(arr)
