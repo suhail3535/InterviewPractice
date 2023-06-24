@@ -502,38 +502,55 @@
 
 
 
-let arr = [1, 2, 3, 5, 5];
+// let arr = [1, 2, 3, 5, 5];
 
-function findMissingRepeated (arr) {
-    let obj = {};
-    for (let i = 1; i <=arr.length; i++) {
-        obj[i] = 0;
+// function findMissingRepeated (arr) {
+//     let obj = {};
+//     for (let i = 1; i <=arr.length; i++) {
+//         obj[i] = 0;
+//     }
+//     // console.log(obj)
+//     for (let i = 0; i < arr.length; i++) {
+//         obj[arr[i]]++;
+//     }
+
+//     let missing;
+//     let repeated;
+
+//     for (let key in obj) {
+//         if (obj[key] === 0) {
+//             missing = key;
+//         }
+//         if (obj[key] === 2) {
+//             repeated = key;
+//         }
+//     }
+
+//     return { missing, repeated };
+// }
+
+// let result = findMissingRepeated(arr);
+// console.log(result.missing, result.repeated);
+
+
+
+function calculateWordCount (str) {
+str = str.trim();
+// If the string is empty, return 0
+    if (str === '') {
+        return 0;
     }
-    // console.log(obj)
-    for (let i = 0; i < arr.length; i++) {
-        obj[arr[i]]++;
-    }
+// Split the string into words using whitespace as the delimiter
+    const words = str.split(/\s+/);
 
-    let missing;
-    let repeated;
-
-    for (let key in obj) {
-        if (obj[key] === 0) {
-            missing = key;
-        }
-        if (obj[key] === 2) {
-            repeated = key;
-        }
-    }
-
-    return { missing, repeated };
+    // Return the number of words
+    return words.length;
 }
 
-let result = findMissingRepeated(arr);
-console.log(result.missing, result.repeated);
-
-
-
+// Example usage
+const string = "This is my name suhail khan";
+const wordCount = calculateWordCount(string);
+console.log("Number of words:", wordCount);
 
 
 
