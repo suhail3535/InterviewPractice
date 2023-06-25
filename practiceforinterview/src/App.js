@@ -1,11 +1,13 @@
 
 
+import Anima from "./Component/Anima";
 import Country from "./Component/Country";
 import Data from "./Component/Data";
 import HomeSvg from "./Component/HomeSvg";
 import Parent from "./Component/Parent";
 import Post from "./Component/Post";
 import PostData from "./Component/PostData";
+import Toggle from "./Component/Toggle";
 
 
 
@@ -14,7 +16,9 @@ function App() {
       <div className="App">
       {/* <Country /> */}
       {/* <PostData /> */}
-      <Parent />
+      {/* <Parent />
+      <Anima /> */}
+      <Toggle />
       </div>
   );
 }
